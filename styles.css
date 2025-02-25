@@ -20,7 +20,7 @@ html, body {
 }
 
 nav {
-    background-color: rgba(0, 0, 0, 0.32);
+    background: rgba(255, 255, 255, 0.1);
     padding: 15px 20px;
     position: fixed;
     top: 0;
@@ -59,10 +59,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #ffb700; /* Sunset color */
-    color: #fff;
+    /*background-color: #ffb700;  Sunset color */
+    color: #FFD700;
     transform: scale(1.1);
 }
+
 
 #confirmation {
     display: none;
@@ -176,7 +177,7 @@ section h2 {
 }
 
 #home {
-    background-color: rgba(42, 42, 42, 0.8);
+    background-color: rgba(0, 0, 0, 0.45);
 }
 
 .home-content {
@@ -224,7 +225,8 @@ button {
 }
 
 button:hover {
-    background-color: #e67e22; /* Change hover color */
+    background-color: #ffffff; /* Change hover color */
+    color: #000000;
 }
 
 .social-links {
@@ -288,9 +290,31 @@ button:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+button {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s 1s forwards;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #f39c12;
+    
+}
+
+
 #skills {
     padding: 60px 20px;
     margin-bottom: 20px;
+    background-color: #000000e2;
 }
 
 .skills-list {
@@ -315,8 +339,8 @@ button:hover {
 }
 
 .skills-list li:hover {
-    background-color: var(--accent-color);
-    color: #fff;
+    background-color: #ffffff0e;
+    color: #ffd901;
     transform: scale(1.05);
 }
 
@@ -383,7 +407,7 @@ button:hover {
 }
 
 #contact {
-    background-color: rgba(44, 44, 44, 0.392);
+    background-color: #000000e2;
     padding: 70px 20px;
     text-align: center;
     padding-top: 180px;
@@ -393,20 +417,29 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
+}
+.contact-header p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #f39c12;
+    align-items: center;
 }
 
 .contact-form-container {
     flex: 1;
-    width: 100%; /* Full width for mobile */
-    max-width: 500px; /* Max width for larger screens */
+    width: 100%;
+    max-width: 900px;
+    width: 500px;
+    height: 600px;
+
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.574);
+    background-color: rgba(91, 91, 91, 0.145);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -414,7 +447,8 @@ button:hover {
 
 .form-group {
     width: 100%;
-    margin-bottom: 20px;
+    color: #ecf0f1;
+    margin-bottom: 25px;
 }
 
 .contact-form input,
@@ -434,7 +468,7 @@ button:hover {
 }
 
 .contact-form button {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.116);
     color: white;
     border: none;
     padding: 12px 20px;
