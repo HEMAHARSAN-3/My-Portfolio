@@ -70,3 +70,24 @@ Hello! I'm Hema Harsan R, a passionate B.Tech student specializing in Artificial
 
     type();
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector("nav");
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("nav ul");
+
+    // Change Navbar Background on Scroll
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+    // Toggle Mobile Menu
+    hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+});
