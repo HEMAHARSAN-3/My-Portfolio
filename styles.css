@@ -278,36 +278,78 @@ button:hover {
 }
 
 /* Container Styling */
+/* About Section */
 #about {
     background-color: #0000007c;
     color: #ecf0f1;
+    padding: 50px 0;
+    text-align: center;
 }
 
+#about h2 {
+    font-size: 2.5rem;
+    color: #af9500;
+    margin-bottom: 20px;
+}
+
+/* Flexbox Layout */
 .about-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 1.5rem;
     margin: 60px;
+    padding-top: 80px;
 }
 
-/* Text Styling */
+/* Animation for Right-to-Left Motion */
+@keyframes moveCode {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Moving Text Styling */
+.moving-text {
+    white-space: nowrap;
+    display: inline-block;
+    font-family: "Courier New", monospace;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    animation: moveCode 10s linear infinite, fadeInUp 1s forwards;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* About Me Section */
 .about-text {
     flex: 1;
-    margin-right: 2rem;
-    
+    max-width: 50%;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    margin: 30px;
 }
 
-/* Text Styling */
 .about-text p {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #ffffff;
+    text-align: justify;
     margin-bottom: 1.5rem;
-    text-align: justify; /* Aligns text to both left and right margins */
-    text-justify: inter-word; /* Adjusts spacing between words for justification */
+    /* margin-top: 10px;
+    margin-right: 10px; */
+    margin: 30px;
 }
-
 
 /* Button Styling */
 .about-text button {
@@ -319,6 +361,7 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 30px;
 }
 
 .about-text button:hover {
@@ -326,20 +369,76 @@ button:hover {
     color: #af9500;
 }
 
-/* Image Styling */
-.about-image {
-    flex: 1;
+/* Right Side */
+.right-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 40%;
 }
 
-.about-img-rig {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 350px;
-    width: 550px;
+/* Academic Section */
+.academic, .social-media {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: left;
+    width: 100%;
+    animation: fadeInUp 1s forwards;
+    margin: 30px;
 }
+
+.academic h3, .social-media h3 {
+    color: #af9500;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    /* margin: 30px; */
+}
+
+.academic p, .social-media a {
+    font-size: 1.1rem;
+    color: #ecf0f1;
+    margin: 30px;
+}
+
+/* Social Media Icons */
+.social-media a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+    /* margin: 30px; */
+}
+
+.social-media a:hover {
+    color: #af9500;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .right-content {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .academic, .social-media {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
 
 
 #skills {
@@ -501,7 +600,7 @@ button:hover {
 /* Project Grid */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
