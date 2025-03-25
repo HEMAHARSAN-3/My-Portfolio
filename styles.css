@@ -302,7 +302,7 @@ button:hover {
     flex-wrap: wrap;
     padding: 1.5rem;
     margin: 60px;
-    padding-top: 80px;
+    padding-top: 60px;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1s 1.5s forwards;
