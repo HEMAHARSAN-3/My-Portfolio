@@ -52,8 +52,3 @@ function openMenu() {
     const nav = document.querySelector('.uls');
     nav.classList.toggle('active');
 }
-
-
-
-
-
