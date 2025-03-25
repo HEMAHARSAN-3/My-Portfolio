@@ -626,7 +626,7 @@ button:hover {
 /* Special Center Alignment for the 4th Project */
 .project-card:nth-child(4) {
     width: 450px; /* Slightly larger for emphasis */
-    height: 500px;
+    height: 480px;
 }
 
 /* Project Card Hover Effect */
@@ -646,7 +646,7 @@ button:hover {
 
 /* Project Title */
 .project-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #FFD700;
     margin: 15px 0;
