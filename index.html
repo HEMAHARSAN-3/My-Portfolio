@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <meta name="description" content="Portfolio of Hema Harsan R, showcasing expertise in AI, Data Science, and Web Development.">
     <title>Hema Harsan R - Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-<nav class="pc-view">
-    <ul class="uls">
+<nav>
+    <a href="#" class="logo">Hema Harsan's Portfolio</a>
+    <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -23,21 +28,12 @@
     </ul>
 </nav>
 
-<div id="confirmation">Thank you for downloading my resume!</div>
-
-<!-- Hamburger Icon for Mobile View -->
-<div class="hamburger" onclick="openMenu()">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-</div>
-
-<!-- Home Section -->
 <section id="home">
     <div class="home-content">
         <div class="text-div">
-            <h1>Hi, I'm Hema Harsan.</h1>
+            <h1>Hi, I'm <span class="highlight">Hema Harsan</span>.</h1>
             <p>I'm an aspiring AI and Data Science enthusiast, eager to learn and grow in the tech industry.</p>
+            <a href="#projects" class="btn">Explore My Work</a>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/hema-harsan-r/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/HEMAHARSAN-3" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
@@ -48,77 +44,86 @@
 </section>
 
 <section id="about">
-    <h2>About Me</h2>
-    <div class="about-content">
-        <div class="about-text">
-            <div id="moving-text">
-                <p>Hello! I'm Hema Harsan R, a passionate B.Tech student specializing in Artificial Intelligence and Data Science. My journey in technology began at a young age, and I have always been fascinated by the potential of AI to transform industries and improve lives. I actively engage in various projects that allow me to apply my knowledge in real-world scenarios. I am always eager to learn new technologies and methodologies.</p>
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="profile-image">
+                <img src="img/harsan.jpg" alt="Hema Harsan R">
             </div>
-            <button aria-label="Contact Me" onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">
-                Contact Me
-            </button>
-        </div>
-
-        <!-- Right Section -->
-        <div class="right-content">
-            <!-- Academic Details -->
-            <div class="academic">
-                <h3>Academic</h3>
+            <div class="about-text">
                 <p>
-                    B.Tech in Artificial Intelligence & Data Science<br>
-                    3rd Year Student<br>
-                    In Dr. N.G.P. Institute of Technology<br><br>
-                    Passionate about Web Development, Data Science.
+                    Hello! I'm <span class="highlight">Hema Harsan R</span>, a passionate B.Tech student specializing in 
+                    <span class="highlight">Artificial Intelligence & Data Science</span>. 
+                    I thrive on crafting innovative solutions through <span class="highlight">AI, Web Development</span>, and 
+                    <span class="highlight">Data Science</span>. 
+                    I'm always eager to explore new technologies and apply my skills in real-world projects.
                 </p>
+                <button class="contact-btn" onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">
+                    Contact Me
+                </button>
             </div>
-
-            <!-- Social Media Links -->
-            <div class="social-media">
-                <h3>Social Media</h3>
-                <a href="https://www.linkedin.com/in/hema-harsan-r/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/HEMAHARSAN-3" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
-                <a href="mailto:hemaharsan3@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="extra-info">
+            <div class="card academic">
+                <h3>🎓 Academic Background</h3>
+                <p>B.Tech in AI & Data Science - 3rd Year <br> <b>Dr. N.G.P. Institute of Technology</b></p>
+            </div>
+            <div class="card social-media">
+                <h3>🌐 Connect with Me</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/hema-harsan-r/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/HEMAHARSAN-3" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:hemaharsan3@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
 
 <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-        <li><i class="fab fa-java"></i> Java</li>
-        <li><i class="fas fa-c"></i> C</li>
-        <li><i class="fas fa-code"></i> HTML & CSS</li>
-        <li><i class="fab fa-python"></i> Python</li>
-        <li><i class="fas fa-leaf"></i> MongoDB</li>
-        <li><i class="fas fa-server"></i> Express.js</li>
-        <li><i class="fab fa-react"></i> React</li>
-        <li><i class="fab fa-node-js"></i> Node.js</li>
-        <li><i class="fab fa-js"></i> JavaScript</li>
-        <li><i class="fas fa-database"></i> SQL</li>
-        <li><i class="fas fa-database"></i> NoSQL</li>
-        <li><i class="fas fa-chart-line"></i> Data Analysis</li>
-        <li><i class="fas fa-chart-bar"></i> Data Visualization</li>
-        <li><i class="fab fa-git"></i> Git & GitHub</li>
-    </ul>
-    <div class="code-image">
-        <img class="code-img-rig" src="img\coding.webp" alt="Coding and Development">
+    <div class="skills-container">
+        <h2>Skills</h2>
+        <div class="skills-content">
+            <div class="skill-category">Programming Languages</div>
+            <ul class="skills-list">
+                <li><i class="fab fa-java"></i> Java</li>
+                <li><i class="fas fa-c"></i> C</li>
+                <li><i class="fab fa-python"></i> Python</li>
+                <li><i class="fab fa-js"></i> JavaScript</li>
+            </ul>
+            <div class="skill-category">Full Stack Development</div>
+            <ul class="skills-list">
+                <li><i class="fas fa-code"></i> HTML & CSS</li>
+                <li><i class="fab fa-react"></i> React</li>
+                <li><i class="fab fa-node-js"></i> Node.js</li>
+                <li><i class="fas fa-server"></i> Express.js</li>
+            </ul>
+            <div class="skill-category">Databases</div>
+            <ul class="skills-list">
+                <li><i class="fas fa-database"></i> SQL</li>
+                <li><i class="fas fa-database"></i> NoSQL</li>
+                <li><i class="fas fa-leaf"></i> MongoDB</li>
+            </ul>
+            <div class="skill-category">Data Science & Tools</div>
+            <ul class="skills-list">
+                <li><i class="fas fa-chart-line"></i> Data Analysis</li>
+                <li><i class="fas fa-chart-bar"></i> Data Visualization</li>
+                <li><i class="fab fa-git"></i> Git & GitHub</li>
+            </ul>
+        </div>
+        <div class="code-image">
+            <img class="code-img-rig" src="img/coding.webp" alt="Coding and Development">
+        </div>
     </div>
 </section>
-
 
 <section id="projects" role="region" aria-labelledby="projects-heading">
     <h2 id="projects-heading">Projects</h2>
     <div class="projects-wrapper">
-        <!-- <div class="line"></div> Vertical Line -->
         <div class="projects-container" id="projects-container">
-            <!-- Project cards will be dynamically added here -->
         </div>
     </div>
 </section>
-
-
 
 <section id="contact">
     <h2>Contact Me</h2>
@@ -146,6 +151,16 @@
 <footer>
     <p>© 2025 Hema Harsan R. All rights reserved.</p>
 </footer>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("active");
+        const hamburger = document.querySelector(".hamburger");
+        hamburger.classList.toggle("open");
+    }
+</script>
+
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="script.js"></script>
 </body>
